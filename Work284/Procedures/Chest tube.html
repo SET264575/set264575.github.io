@@ -42,6 +42,8 @@ Tolerated
 
             
       <div class="boxed" value = "size of tube">
+      <input type = "radio" id = "size of tube0" name = "size of tube" value = "14" onchange = "copytext()">
+      <label for = "size of tube0">14 Fr pig-tail</label><br>
       <input type = "radio" id = "size of tube0" name = "size of tube" value = "20" onchange = "copytext()">
       <label for = "size of tube0">20 Fr</label><br>
       </div>
@@ -90,14 +92,16 @@ Tolerated
         t = t + intercostal;
         
         t = t + " intercostal space in the mid-axillary line, was prepped with Betadine and sterile drapes, and then infiltrated with " + volume + " cc of " + anesthetic;
-        t = t + ".  An skin incision was then made with a #15 blade and the tissues were bluntly dissected to the pleural space.  A ";
         switch(size){
+          case "14":
+            t = t + "A 14 Fr pig-tail catheter was inserted using standard technique with a Wayne pneumothorax tray ";
+            break;
           case "20":
-            t = t + "20 Fr ";
+            t = t + ".  An skin incision was then made with a #15 blade and the tissues were bluntly dissected to the pleural space.  A 20 Fr chest tube was placed ";
             break;
         }
         
-        t = t + "chest tube was placed and connected to suction with return of " + drainage + ". ";
+        t = t + "and connected to suction with return of " + drainage + ". ";
         t = t + "The patient tolerated the procedure well.  There were no complications. "  
         displayText(t);
       }
