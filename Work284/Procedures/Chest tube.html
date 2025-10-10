@@ -29,7 +29,7 @@ Tolerated
         <input type = "radio" id = "Indication1" value = "hemothorax" name = "Indication" onchange = "copytext()">
         <label for = "Indication1">hemothorax</label>
       </div>
-
+      <div id="div_consent"></div>
       <div class="boxed" value = "Location">
       <div id="div_sideUnboxed"></div>
       
@@ -86,7 +86,7 @@ Tolerated
         t = t + "Procedure Note: Chest Tube Placement\n";
         t = t + "Chest tube was indicated for "+Indication;
         t = t + consent;
-        t = t + "The insertion site, at the " + side.toLowerCase();
+        t = t + "The insertion site, at the " + side.toLowerCase()+" ";
         t = t + intercostal;
         
         t = t + " intercostal space in the mid-axillary line, was prepped with Betadine and sterile drapes, and then infiltrated with " + volume + " cc of " + anesthetic;
