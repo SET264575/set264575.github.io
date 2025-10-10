@@ -133,7 +133,12 @@ function createRecord(i,j){
   		x.innerHTML = "Room "+String(i);
   }
   else {
-    x.innerHTML = "Hallway";
+    if (i == 23) {
+		x.innerHTML = "Hallway";
+	}
+	  else {
+		  x.innerHTML = "Front";
+	  }
   }
   x.setAttribute("class","button2");
   x.setAttribute("name",i);
@@ -405,3 +410,4 @@ function currentTime(){
 }
 		
 		
+
