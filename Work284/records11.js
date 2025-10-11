@@ -129,11 +129,11 @@ function displayRecords(){
 function createRecord(i,j){
   var tree2 = document.createDocumentFragment();
   var x = document.createElement("button");
-	if (i < 23) {
+	if (i < 17) {
   		x.innerHTML = "Room "+String(i);
   }
   else {
-    if (i == 23) {
+    if (i == 25) {
 		x.innerHTML = "Hallway";
 	}
 	  else {
@@ -418,4 +418,5 @@ function grayOutCell(c) {
     cell.style.pointerEvents = "none";     // Disable interaction
   }
 }
+
 
