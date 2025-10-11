@@ -272,12 +272,7 @@ function pickRoom(i){
 function deleteRoom(i){
   var c = document.getElementById(i);
   if (c.innerHTML.includes('disposed')) {
-	  all_dx = all_dx + "\n"+document.getElementById("rm"+String(i)+"_dx").value;
-	  all_plans = all_plans + "\n" + document.getElementById("rm"+String(i)+"_plan").value;
-	  room[i].mine = false;
-	  document.getElementById('dx').innerHTML = all_dx;
-	  document.getElementById('plans').innerHTML = all_plans; //all_plans;
-		
+	  room[i].mine = false;		
 	  refreshTable();
 	  displayRecords();
   }
@@ -359,15 +354,3 @@ function currentTime(){
 	var x = Date().toLocaleString();
 	return(x.slice(16,21));
 }
-		
-		
-
-
-
-
-
-
-
-
-
-
