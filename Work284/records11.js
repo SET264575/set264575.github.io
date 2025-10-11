@@ -54,6 +54,7 @@ const roomCount = 24;
 
 function Room() {
   this.mine = false;
+  this.disposed = false;
   this.wu_orders =  true;
   this.wu_workuppending =  false;
   this.wu_labspending =  true;
@@ -140,6 +141,7 @@ function createRecord(i,j){
 		  x.innerHTML = "Front";
 	  }
   }
+  if (x.disposed) {x.innerHTML = x.innerHTML + ' - disposed';
   x.setAttribute("class","button2");
   x.setAttribute("name",i);
  // x.setAttribute("width","70");
@@ -327,7 +329,7 @@ function pickRoom(i){
 
 function deleteRoom(i){
   var c = document.getElementById(i);
-  if (c.text.contains('disposed')) {
+  if (c.innerHTML.includes('disposed')) {
 	  all_dx = all_dx + "\n"+document.getElementById("rm"+String(i)+"_dx").value;
 	  all_plans = all_plans + "\n" + document.getElementById("rm"+String(i)+"_plan").value;
 	  room[i].mine = false;
@@ -425,6 +427,7 @@ function grayOutCell(c) {
     cell.style.pointerEvents = "none";     // Disable interaction
   }
 }
+
 
 
 
