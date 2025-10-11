@@ -272,6 +272,10 @@ function pickRoom(i){
 
 function deleteRoom(i){
   var c = document.getElementById(i);
+	console.log(c);
+	console.log(c.innerHTML);
+	console.log(document.getElementById(String(i)));
+	console.log(i);
   if (c.innerHTML.includes('disposed')) {
 	  room[i].mine = false;		
 	  refreshTable();
@@ -355,6 +359,7 @@ function currentTime(){
 	var x = Date().toLocaleString();
 	return(x.slice(16,21));
 }
+
 
 
 
