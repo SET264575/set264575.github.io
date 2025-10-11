@@ -341,7 +341,7 @@ function deleteRoom(i){
   }
   else
   {
-	  c.text = c.text + ' - disposed';
+	  room[i].disposed = true;
   }
 }
 
@@ -427,6 +427,7 @@ function grayOutCell(c) {
     cell.style.pointerEvents = "none";     // Disable interaction
   }
 }
+
 
 
 
