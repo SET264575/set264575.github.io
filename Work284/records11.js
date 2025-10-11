@@ -86,7 +86,7 @@ function createRecord(i,j){
 		  x.innerHTML = "Front";
 	  }
   }
-  if (x.disposed) {x.innerHTML = x.innerHTML + ' - disposed';
+  if (x.disposed) {x.innerHTML = x.innerHTML + ' - disposed';}
   x.setAttribute("class","button2");
   x.setAttribute("name",i);
  // x.setAttribute("width","70");
@@ -361,6 +361,7 @@ function currentTime(){
 }
 		
 		
+
 
 
 
