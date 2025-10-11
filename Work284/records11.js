@@ -86,8 +86,8 @@ function createRecord(i,j){
 		  x.innerHTML = "Front " + String(i-16);
 	  }
   }
-	console.log("disposed = " + x.disposed);
-  if (x.disposed) {x.innerHTML = x.innerHTML + ' - disposed';}
+	console.log("disposed = " + room[i].disposed);
+  if (room[i].disposed) {x.innerHTML = x.innerHTML + ' - disposed';}
   x.setAttribute("class","button2");
   x.setAttribute("name",i);
   x.setAttribute("id","Btn"+String(i));
@@ -356,6 +356,7 @@ function currentTime(){
 	var x = Date().toLocaleString();
 	return(x.slice(16,21));
 }
+
 
 
 
