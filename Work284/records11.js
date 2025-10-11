@@ -290,8 +290,6 @@ function deleteRoom(i){
 
 
 function refreshTable(){
-  var x = document.getElementById('awaitListPlaceholder');
-  x.innerHTML = "";
   var x = document.getElementById('table1');
   x.innerHTML = '      <tr>\
         <td class = "td1" id="cell1"> <p id="demo1"></p> </td>\
@@ -360,6 +358,7 @@ function currentTime(){
 	var x = Date().toLocaleString();
 	return(x.slice(16,21));
 }
+
 
 
 
