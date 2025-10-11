@@ -272,19 +272,17 @@ function pickRoom(i){
 }
 
 function deleteRoom(i){
-  var c = document.getElementById("Btn"+String(i));
-	console.log(c);
-	console.log(c.innerHTML);
-	console.log(document.getElementById(String(i)));
-	console.log(i);
-  if (c.innerHTML.includes('disposed')) {
-	  room[i].mine = false;		
+  if (room[i].disposed == true) {
+	  room[i].mine = false;	
+	  room[i].disposed = false;
 	  refreshTable();
 	  displayRecords();
   }
   else
   {
 	  room[i].disposed = true;
+	  refreshTable();
+	  displayRecords();
   }
 }
 
@@ -358,6 +356,7 @@ function currentTime(){
 	var x = Date().toLocaleString();
 	return(x.slice(16,21));
 }
+
 
 
 
