@@ -50,7 +50,7 @@ var activeElement = 'none';
 var all_dx = "";
 var all_plans = "";
 var pt_count = 0;
-const roomCount = 24;
+const roomCount = 25;
 
 function Room() {
   this.mine = false;
@@ -427,6 +427,7 @@ function grayOutCell(c) {
     cell.style.pointerEvents = "none";     // Disable interaction
   }
 }
+
 
 
 
