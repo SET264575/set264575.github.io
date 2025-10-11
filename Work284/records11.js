@@ -1,50 +1,3 @@
-//Improvements:
-
-// done - Put work up and note in 2 columns
-// done - Add textbox for dx, problems
-//  done - formatting:  don't vertically center
-//  done - formatting:  buttons to left side
-//  done - release room with button
-//  DONE - put dx in textarea
-//  done - more table cells
-//  done - larger text area
-//  done = larger buttons
-//  done - document ct
-//  done - note consult if consult checked
-//  done - box for ekg
-//  done - time activities
-//  done - Special:  chest pain, sepsis, DKA, pancreatitis, stroke
-//  done - continue negative countdown
-//  done - needs space after comma
-//  done - bold numbers on activity
-//  done - split awaiting into task and time separately
-
-
-//  *Pending labs:  UA, repeat troponin 
-//  done - EKG disappears
-//  *national IV shortage
-//  done - change text color
-//  done - to do tasks:  print labs, prescriptions, work note, consult, 
-//  done - buttons to show what needs done on pt:  see patient, consult, meds, labs, procedure, work note, prescription
-//  done - separate box for plan
-//  done = button to red
-
-//  save to file
-//  IV contrast not used
-//  conditions:  admitting, neuro, night, number of patients
-//  list awaiting at bottom of each room
-//  diagnosis at the top
-//  add to list of charts to finish
-
-
-
-//  MDM:
-//	Sepsis
-//	Heart score
-//	Pancreatitis
-//	Stroke
-
-
 var newest = 0;
 var activeElement = 'none';
 var all_dx = "";
@@ -94,12 +47,6 @@ function Room() {
   this.awaiting = [];
 }
 
-
-
-
-
-
-
 const room = [];
 const default_room = new Room;
 
@@ -109,8 +56,6 @@ for (let i = 1; i < roomCount; i++){
 
 
 function displayRecords(){
-
-	
   let j = 0;
   for (let i = 1; i < roomCount; i++) {
     if (room[i].mine == true){
@@ -153,9 +98,6 @@ function createRecord(i,j){
   tree2.appendChild(createTextbox(i));
 
   document.getElementById("demo"+String(j)).appendChild(tree2);
- 
-
- 
 }
 
 function createCheckboxes(){
@@ -427,6 +369,7 @@ function grayOutCell(c) {
     cell.style.pointerEvents = "none";     // Disable interaction
   }
 }
+
 
 
 
