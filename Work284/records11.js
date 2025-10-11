@@ -361,14 +361,6 @@ function currentTime(){
 }
 		
 		
-function grayOutCell(c) {
-  const cell = document.getElementById(c);
-  if (cell) {
-    cell.style.backgroundColor = "#d3d3d3"; // Light gray
-    cell.style.color = "#888";             // Dim text
-    cell.style.pointerEvents = "none";     // Disable interaction
-  }
-}
 
 
 
