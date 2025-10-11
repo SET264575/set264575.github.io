@@ -83,7 +83,7 @@ function createRecord(i,j){
 		x.innerHTML = "Hallway";
 	}
 	  else {
-		  x.innerHTML = "Front";
+		  x.innerHTML = "Front " + String(i-16);
 	  }
   }
 	console.log("disposed = " + x.disposed);
@@ -355,5 +355,6 @@ function currentTime(){
 	var x = Date().toLocaleString();
 	return(x.slice(16,21));
 }
+
 
 
