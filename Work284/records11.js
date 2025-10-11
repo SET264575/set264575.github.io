@@ -3,7 +3,7 @@ var activeElement = 'none';
 var all_dx = "";
 var all_plans = "";
 var pt_count = 0;
-const roomCount = 25;
+const roomCount = 26;
 
 function Room() {
   this.mine = false;
@@ -354,3 +354,4 @@ function currentTime(){
 	var x = Date().toLocaleString();
 	return(x.slice(16,21));
 }
+
