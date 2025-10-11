@@ -90,6 +90,7 @@ function createRecord(i,j){
   if (x.disposed) {x.innerHTML = x.innerHTML + ' - disposed';}
   x.setAttribute("class","button2");
   x.setAttribute("name",i);
+  x.setAttribute("id","Btn"+String(i));
  // x.setAttribute("width","70");
   x.setAttribute("onclick","deleteRoom(this.name)");
   tree2.appendChild(x);
@@ -271,7 +272,7 @@ function pickRoom(i){
 }
 
 function deleteRoom(i){
-  var c = document.getElementById(i);
+  var c = document.getElementById("Btn"+String(i));
 	console.log(c);
 	console.log(c.innerHTML);
 	console.log(document.getElementById(String(i)));
@@ -359,6 +360,7 @@ function currentTime(){
 	var x = Date().toLocaleString();
 	return(x.slice(16,21));
 }
+
 
 
 
