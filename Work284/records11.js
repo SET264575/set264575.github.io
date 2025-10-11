@@ -326,7 +326,7 @@ function pickRoom(i){
 }
 
 function deleteRoom(i){
-  c = document.getElementById(i);
+  var c = document.getElementById(i);
   if c.text.contains('disposed') {
 	  all_dx = all_dx + "\n"+document.getElementById("rm"+String(i)+"_dx").value;
 	  all_plans = all_plans + "\n" + document.getElementById("rm"+String(i)+"_plan").value;
@@ -425,6 +425,7 @@ function grayOutCell(c) {
     cell.style.pointerEvents = "none";     // Disable interaction
   }
 }
+
 
 
 
