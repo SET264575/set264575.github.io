@@ -342,20 +342,20 @@ function refreshTable(){
   x.innerHTML = "";
   var x = document.getElementById('table1');
   x.innerHTML = '      <tr>\
-        <td class = "td1"> <p id="demo1"></p> </td>\
-        <td class = "td1"> <p id="demo2"></p> </td>\
-        <td class = "td1"> <p id="demo3"></p> </td>\
-        <td class = "td1"> <p id="demo4"></p> </td>\
-        <td class = "td1"> <p id="demo5"></p> </td>\
-        <td class = "td1"> <p id="demo6"></p> </td>\
+        <td class = "td1" id="cell1"> <p id="demo1"></p> </td>\
+        <td class = "td1" id="cell2"> <p id="demo2"></p> </td>\
+        <td class = "td1" id="cell3"> <p id="demo3"></p> </td>\
+        <td class = "td1" id="cell4"> <p id="demo4"></p> </td>\
+        <td class = "td1" id="cell5"> <p id="demo5"></p> </td>\
+        <td class = "td1" id="cell6"> <p id="demo6"></p> </td>\
       </tr>\
       <tr>\
-        <td class = "td1"> <p id="demo7"></p> </td>\
-        <td class = "td1"> <p id="demo8"></p> </td>\
-        <td class = "td1"> <p id="demo9"></p> </td>\
-        <td class = "td1"> <p id="demo10"></p> </td>\
-        <td class = "td1"> <p id="demo11"></p> </td>\
-        <td class = "td1"> <p id="demo12"></p> </td>\
+        <td class = "td1" id="cell7"> <p id="demo7"></p> </td>\
+        <td class = "td1" id="cell8"> <p id="demo8"></p> </td>\
+        <td class = "td1" id="cell9"> <p id="demo9"></p> </td>\
+        <td class = "td1" id="cell10"> <p id="demo10"></p> </td>\
+        <td class = "td1" id="cell11"> <p id="demo11"></p> </td>\
+        <td class = "td1" id="cell12"> <p id="demo12"></p> </td>\
       </tr>';
 /*	<h3>Diagnoses</h3\
     <pre id="dx" /><br><br>\
@@ -410,4 +410,12 @@ function currentTime(){
 }
 		
 		
+function grayOutCell(c) {
+  const cell = document.getElementById(c);
+  if (cell) {
+    cell.style.backgroundColor = "#d3d3d3"; // Light gray
+    cell.style.color = "#888";             // Dim text
+    cell.style.pointerEvents = "none";     // Disable interaction
+  }
+}
 
