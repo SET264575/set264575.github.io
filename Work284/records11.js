@@ -326,14 +326,21 @@ function pickRoom(i){
 }
 
 function deleteRoom(i){
-  all_dx = all_dx + "\n"+document.getElementById("rm"+String(i)+"_dx").value;
-  all_plans = all_plans + "\n" + document.getElementById("rm"+String(i)+"_plan").value;
-  room[i].mine = false;
-  document.getElementById('dx').innerHTML = all_dx;
-  document.getElementById('plans').innerHTML = all_plans; //all_plans;
-	
-  refreshTable();
-  displayRecords();
+  c = document.getElementById(i);
+  if c.text.contains('disposed') {
+	  all_dx = all_dx + "\n"+document.getElementById("rm"+String(i)+"_dx").value;
+	  all_plans = all_plans + "\n" + document.getElementById("rm"+String(i)+"_plan").value;
+	  room[i].mine = false;
+	  document.getElementById('dx').innerHTML = all_dx;
+	  document.getElementById('plans').innerHTML = all_plans; //all_plans;
+		
+	  refreshTable();
+	  displayRecords();
+  }
+  else
+  {
+	  c.text = c.text + ' - disposed';
+  }
 }
 
 
@@ -418,5 +425,6 @@ function grayOutCell(c) {
     cell.style.pointerEvents = "none";     // Disable interaction
   }
 }
+
 
 
