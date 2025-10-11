@@ -51,8 +51,8 @@ Tolerated
       <h4>Tube drainage</h4>
       <select id = "Tube drainage"  onchange = "copytext()">
          <option>no fluid or air</option>
-         <option>small amount of air</option>
-         <option>large amount of air</option>
+         <option>a small amount of air</option>
+         <option>a large amount of air</option>
          <option>clear fluid</option>
          <option>bloody fluid</option>
       </select><br><br>
@@ -86,7 +86,7 @@ Tolerated
         var drainage = getValue("Tube drainage");
 
         t = t + "Procedure Note: Chest Tube Placement\n";
-        t = t + "Chest tube was indicated for "+Indication;
+        t = t + "Chest tube was indicated for "+Indication+". ";
         t = t + consent;
         t = t + "The insertion site, at the " + side.toLowerCase()+" ";
         t = t + intercostal;
@@ -94,7 +94,7 @@ Tolerated
         t = t + " intercostal space in the mid-axillary line, was prepped with Betadine and sterile drapes, and then infiltrated with " + volume + " cc of " + anesthetic;
         switch(size){
           case "14":
-            t = t + "A 14 Fr pig-tail catheter was inserted using standard technique with a Wayne pneumothorax tray ";
+            t = t + ". A 14 Fr pig-tail catheter was inserted using standard technique with a Wayne pneumothorax tray ";
             break;
           case "20":
             t = t + ".  An skin incision was then made with a #15 blade and the tissues were bluntly dissected to the pleural space.  A 20 Fr chest tube was placed ";
