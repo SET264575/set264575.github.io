@@ -10,7 +10,7 @@
     <div class="main">
       <h3>Digital block</h3>
 
-      <div class="boxed" value="Indication">
+      <!--div class="boxed" value="Indication">
 
       <input type = "radio" id = "indication1" name = "indication" value = "fracture reduction" onchange="copytext()">
       <label for = "indication1">Fracture reduction</label><br>    
@@ -26,12 +26,12 @@
       <label for = "indication1">Abscess I&D</label><br>    
       <input type = "radio" id = "indication7" name = "indication" value = "nail trephination" onchange="copytext()">
       <label for = "indication1">Nail trephination</label><br>
-      </div>
+    </div-->
 
       <div id= "div_consent"></div>
       
-      <div class="boxed" value="Location">
-      <div id = "div_sideUnboxed"></div>
+      <!--div class="boxed" value="Location">
+      <div id = "div_sideUnboxed"></div-->
 
       <div id="div_finger"></div>
 
@@ -40,7 +40,7 @@
       <label for = "finger">Finger</label><br> 
       <input type = "radio" value = "Toe" id = "toe" name = "digit" onchange = "copytext()">
       <label for = "toe">Toe</label-->
-      </div>
+      <!--/div-->
 
 
 
@@ -77,7 +77,7 @@
         var anesthetic = getValue("anesthetic");
         var volume = getValue("volume");
         var side = getValue("side");
-        var finger = getRadioButtonValue("finger");
+        var finger = getValue("finger");
         console.log(finger);
         var digit = getValue("digit");
         var location = side + " " + finger + " " + digit;
