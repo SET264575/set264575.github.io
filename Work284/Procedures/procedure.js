@@ -13,7 +13,7 @@ function getRadioButtonValue(name){
       }
       else
       {
-     //   console.log('treating ' + name + " as a radio button with value = " + ele[i].value);
+      console.log('treating ' + name + " as a radio button with value = " + ele[i].value);
         return(ele[i].value);
       }
     }
