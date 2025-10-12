@@ -91,7 +91,8 @@ function createRecord(i,j){
   x.setAttribute("class","button2");
   x.setAttribute("name",i);
   x.setAttribute("id","Btn"+String(i));
-  x.setAttribute("style.width","150");
+  x.style.width = 150;
+ // x.setAttribute("style.width","150");
  // x.setAttribute("width","70");
   x.setAttribute("onclick","deleteRoom(this.name)");
   tree2.appendChild(x);
@@ -357,6 +358,7 @@ function currentTime(){
 	var x = Date().toLocaleString();
 	return(x.slice(16,21));
 }
+
 
 
 
