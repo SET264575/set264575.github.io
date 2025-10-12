@@ -33,7 +33,7 @@
         <div id="div_contamination"></div>
         <br>
         <h4>Inspection of Tendon</h4>
-        <input type = "radio" name = "tendon" value = "0" id = "tendon1" onchange = "copytext()" >
+        <input type = "radio" name = "tendon" value = "3" id = "tendon1" onchange = "copytext()" >
         <label for = "tendon1">No tendon was visualized through a full range of motion.</label><br>
         <input type = "radio" name = "tendon"  value = "1" id = "tendon2" onchange = "copytext()">
         <label for = "tendon2">A tendon was inspected through full range of motion and no injury was found.</label><br>
@@ -109,7 +109,7 @@
         t  = t + contamination;
         console.log(tendon);
         switch(tendon) {
-          case "0":
+          case "3":
             t = t + " Careful exploration to the bottom of the wound in a bloodless field found no exposed tendon. ";
             break;
           case "1":
